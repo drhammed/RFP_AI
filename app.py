@@ -24,7 +24,7 @@ st.sidebar.header("Configuration")
 
 # API keys
 default_voyage_key = st.secrets["api_keys"]["VOYAGE_API_KEY"]
-default_groq_key = st.secrets["api_keys"]("GROQ_API_KEY")
+default_groq_key = st.secrets["api_keys"]["GROQ_API_KEY"]
 
 # Sidebar API key inputs with default values (masked)
 voyage_api_key_sidebar = st.sidebar.text_input(
@@ -70,9 +70,9 @@ prompt_template = st.sidebar.text_area(
 
 # -------------------------------------------
 # Config from streamlit
-NEO4J_URI = st.secrets["api_keys"]("NEO4J_URI")
-NEO4J_USER = st.secrets["api_keys"]("NEO4J_USER")
-NEO4J_PASSWORD = st.secrets["api_keys"]("NEO4J_PASSWORD")
+NEO4J_URI = st.secrets["api_keys"]["NEO4J_URI"]
+NEO4J_USER = st.secrets["api_keys"]["NEO4J_USER"]
+NEO4J_PASSWORD = st.secrets["api_keys"]["NEO4J_PASSWORD"]
 
 # Here, I use API keys primarily from st.secrets, with sidebar override
 VOYAGE_API_KEY = voyage_api_key_sidebar or default_voyage_key
