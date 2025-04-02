@@ -6,7 +6,7 @@ import faiss
 from sklearn.metrics.pairwise import cosine_similarity
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_groq import ChatGroq
-import voyageai  # Import the VoyageAI package
+import voyageai
 from neo4j import GraphDatabase
 
 # -------------------------------------------
